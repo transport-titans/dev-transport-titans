@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .username::placeholder {
+        color: {{username_missing}};
+    }
+
+    .password::placeholder {
+        color: {{password_missing}};
+    }
+
+    .username {
+        color: {{username_error}};
+    }
+
+    .password {
+        color: {{password_error}};
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/SignIn.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="signin_full_page">
+        <form class="signin_container" method="post" action="/authentication">
+            <a>{{dynamic_color}}</a>
+            <a class="login_page_title"><b>Transport Titans</b></a>
+            <hr class="line_1">
+            <h3 class="login_text">Login</h3>
+            <div class="login_username_container credentials_container">
+                <img src="../static/icons/user_icon.svg" class="icons" alt="Username:" width="28px" height="28px">
+                <input type="username" class="username credentials" name="username" placeholder="Enter your username..." value="{{keepUsername}}">
+            </div>
+            <div class="login_password_container credentials_container">
+                <img src="../static/icons/password_icon.svg" class="icons" alt="Username:" width="28px" height="28px">
+                <input type="password" class="password credentials" name="password" placeholder="Enter your password...">
+            </div>
+            <div class="login_submit_container">
+                <input type="submit" class="submit_btn" value="Login">
+            </div>
+            <div class="errors">
+                <p>{{dynamicErrors}}</p>
+            </div>
+        </form>
+</body>
+</html>

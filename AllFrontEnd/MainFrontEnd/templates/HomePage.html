@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/HomePageStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="button_container">
+        <input type="button" onclick="redirectToSignIn()" value="Sign-In" class="button">
+        <input type="button" onclick="redirectToSignUp()" value="Sign-Up" class="button">
+    </div>
+</body>
+
+<script>
+    function redirectToSignIn() {
+        window.location.href = "/authentication";
+    }
+
+    function redirectToSignUp() {
+        window.location.href = "/signup";
+    }
+</script>
+</html>
